@@ -1,6 +1,14 @@
 # Linear-coupled-multi-GPFA
 Alignment of multi-days or multi-populations neural dynamics based on modified GPFA algorithm.
-html<br><figure style="text-align:center;"><br> <img src="./multi_days_dynamics.png" alt="multi-day neural dynamics trajectory" width="1000"><br> <figcaption><strong>Figure&nbsp;1.</strong> Multi-day neural dynamics trajectory of three different stimuli across four recording sessions. </figcaption><br></figure><br>
+
+<figure style="margin:0 auto; text-align:center;">
+  <img src="./multi_days_dynamics.png"
+       alt="multi-day neural dynamics trajectory"
+       style="display:block; max-width:1000px; width:100%;">
+  <figcaption><strong>Figure&nbsp;1.</strong>
+    Multi-day neural dynamics trajectory of three different stimuli across four recording sessions.
+  </figcaption>
+</figure>
 
 # Motivation
 With the rapid advancement of neural‐recording technologies, methods for simultaneously monitoring large neural populations across days and brain regions are becoming increasingly mature. Chronic implantation of Neuropixels probes is among the most promising approaches: such implants have already enabled year-long recordings from two to three brain regions in mammals. Nonetheless, even chronic probes cannot remain perfectly stationary in the brain; probe drift and the natural turnover of neurons mean that the populations recorded on different days inevitably differ. This variability complicates the analysis of unified neural-dynamics trajectories across days. To tackle the problem of aligning dynamics while explicitly accounting for differences in the recorded populations, we propose the Linear-Coupled-Multi-GPFA method. The same framework can also be used to align dynamical trajectories across distinct brain regions.
@@ -22,5 +30,22 @@ $$
 Inference jointly learns the loading matrix $\mathbf{C}$, offsets $\mathbf{d}$, noise covariances $\mathbf{R}$, and GP hyper-parameters $\{\sigma_k,\ell_k\}$, yielding smooth low-dimensional trajectories that capture shared neural dynamics while filtering out independent noise.
 
 # LCM-GPFA
+<figure style="margin:0 auto; text-align:center;">
+  <img src="./model_design.png"
+       alt="multi-day neural dynamics trajectory"
+       style="display:block; max-width:1000px; width:100%;">
+  <figcaption><strong>Figure&nbsp;2.</strong>
+    Model and loss function design of LCM-GPFA
+  </figcaption>
+</figure>
 
 
+# Parameters
+<figure style="margin:0 auto; text-align:center;">
+  <img src="./parameters_and_initialization.png"
+       alt="multi-day neural dynamics trajectory"
+       style="display:block; max-width:1000px; width:100%;">
+  <figcaption><strong>Figure&nbsp;3.</strong>
+    Parameters in the model and how they are initialized
+  </figcaption>
+</figure>
